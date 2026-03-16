@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  color: #0277bd;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+canvas {
+  border: 8px solid #0288d1;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  image-rendering: pixelated;     /* pentru aspect clar la scale */
+  transition: filter 0.4s;
+}
+
+canvas:hover {
+  filter: brightness(1.08) contrast(1.1);
+}
+
+.controls {
+  margin: 20px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button, select {
+  padding: 10px 18px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: #0288d1;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+button:hover, select:hover {
+  background: #0277bd;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(2,136,209,0.4);
+}
+
+#message {
+  margin-top: 25px;
+  font-size: 1.6rem;
+  color: #d81b60;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#message.show {
+  opacity: 1;
+}
